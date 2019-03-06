@@ -1,0 +1,18 @@
+<h1 class="mt-4 text-center">Gallery</h1>
+<div class="row mt-4">
+  <% images.forEach(function(image) { %>
+    <div class="card col-4 border-0">
+      <a href="<%= image.url %>" target="_blank">
+        <img src="<%= image.url %>" class="card-img-top img-thumbnail gallery-image" alt="..."></a>
+      <div class="card-body text-center">
+        <h5 class="card-title"><%= image.title %></h5>
+        <p class="card-text">Posted by: <%= image.author %></p>
+        <p class="card-text">Posted on: <%= image.date %></p>
+      </div>
+    </div>
+    <% }); %>
+</div>
+
+<p class="lead mt-4 text-center">
+  Join the fun!  <a href="/gallery/new">Post an image</a>
+</p>

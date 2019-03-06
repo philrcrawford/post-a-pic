@@ -1,0 +1,20 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-0"><%= name %></p>
+<p class="lead mb-3">Joined: <%= date.getFullYear() %>-<%= date.getMonth() + 1 %>-<%= date.getDate() %> (Y-M-D)</p>
+<a href="/gallery" class="btn btn-primary">Gallery</a>
+<a href="/gallery/new" class="btn btn-success">Post a new image</a>
+<!-- <a href="/users/update" class="btn btn-secondary">Update User Information</a> -->
+<hr>
+<h3 class="mt-4 text-center"><%= name %>'s Images</h3>
+<div class="row mt-4">
+  <% images.forEach(function(image) { %>
+    <div class="card col-4 border-0">
+      <a href="<%= image.url %>" target="_blank">
+        <img src="<%= image.url %>" class="card-img-top img-thumbnail gallery-image" alt="..."></a>
+      <div class="card-body text-center">
+        <h5 class="card-title"><%= image.title %></h5>
+        <p class="card-text">Posted on: <%= image.date %></p>
+      </div>
+    </div>
+    <% }); %>
+</div>

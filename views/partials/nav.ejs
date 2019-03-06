@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav d-flex ml-auto">
+        <a class="nav-item nav-link" href="/gallery">Gallery</a>
+        <a class="nav-item nav-link" href="/gallery/new">Post Image</a>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            User Management
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <% if (login) { %>
+            <a class="dropdown-item" href="/dashboard">Dashboard</a>
+            <a class="dropdown-item" href="/users/logout">Logout</a>
+            <% } else { %>
+            <a class="dropdown-item" href="/users/login">Login</a>
+            <a class="dropdown-item" href="/users/register">Register</a>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
